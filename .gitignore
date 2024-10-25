@@ -1,0 +1,21 @@
+#
+__pycache__/
+Figures/
+*.csv
+*.xlsx
+*.png
+
+#LaTeX stuff
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.run.xml
+*.synctex.gz
+*.toc
+*.bib
+*.out
+*.*-SAVE-ERROR
