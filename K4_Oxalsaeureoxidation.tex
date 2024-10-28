@@ -6,13 +6,14 @@
 \usepackage[english]{babel}
 \usepackage{csquotes}
 
-\usepackage[backend=biber,style=apa,sorting=ynt]{biblatex}
+\usepackage[backend=biber,style=verbose-ibid,sorting=ynt]{biblatex}
 \addbibresource{W2.bib}
 
 \usepackage[breaklinks]{hyperref}
 
 \usepackage{graphicx}
 \usepackage{float}
+\usepackage[tableposition=top, justification=centering]{caption}
 
 \usepackage{derivative}
 
@@ -68,7 +69,7 @@ To create the calibration, the 1~mmol/L potassium permanganate solution, which w
 \subsection{Measurement of the Autocatalyzed Redox Reaction of KMnO\texorpdfstring{\textsubscript{4}}{4} and Oxalic Acid} \label{ssec_experiment_reaction_autocatalyzed}
 By further diluting the 10~mmol/L solution prepared in \ref{ssec_experiment_abs_maximum}, a solution with a concentration of 4~mmol/L was prepared. Additionally, a 40~mmol/L solution of oxalic acid was obtained by dissolving AAAAA~g oxalic acid in deionized water in a AAAAA~mL volumetric flask. Additionally, a sulfuric acid solution of about 24~w\% was prepared by combining three parts water with one part concentrated (96~\%) sulfuric acid.
 
-To start the reaction, 10~mL of the oxalic acid solution, 0.4~mL of the sulfuric acid and 4~mL of the potassium permanaganate solution were added to a beaker and mixed thoroughly. A stopwatch was started once the permanganate solution was added. After filling 2~mL of the mixture into a cuvette, absorbance measurements were taken every 10 seconds, the measured value reached 0 or stopped changing. This experiment was repeated two more times.
+To start the reaction, 10~mL of the oxalic acid solution, 0.4~mL of the sulfuric acid and 4~mL of the potassium permanganate solution were added to a beaker and mixed thoroughly. A stopwatch was started once the permanganate solution was added. After filling 2~mL of the mixture into a cuvette, absorbance measurements were taken every 10 seconds, the measured value reached 0 or stopped changing. This experiment was repeated two more times.
 
 \subsection{Measurement of the Mn\texorpdfstring{\textsuperscript{2+}}{2+}-Catalyzed Redox Reaction of KMnO\texorpdfstring{\textsubscript{4}}{4} and Oxalic Acid}
 By dissolving AAAAA~g manganese sulfate in deionized water in a AAAAA~mL volumetric flask, a 40~mmol/L soluton was prepared.
@@ -84,8 +85,35 @@ By diluting the former with the latter solution, small amounts of solutions with
 
 \newpage
 \section{Results and Discussion}
+\subsection{Absorbance Maximum and Calibration Curve of KMnO\texorpdfstring{\textsubscript{4}}{4}}
+The recorded absorbances of potassium permanganate are plotted as an absorbance spectrum in Figure \ref{fig_kmno4_absorbance_spectrum}. The determined absorbance maximum is at 532~nm.
+%
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{Figures/Absorption\_Maximum.png}
+    \caption{Absorbance spectrum of KMnO\textsuperscript{4} at wavelengths between 450 and 600~nm. The blue dots show the measurements of the first scan, which was taken in 10~nm increments, while the orange dots mark the measurements of the second scan (2~nm increments). The absorbance maximum at 532~nm is shown in green.}
+    \label{fig_kmno4_absorbance_spectrum}
+\end{figure}
+%
+\noindent Figure \ref{fig_kmno4_absorbance_calibration} shows the calibration curve (created through linear regression) for the concentration of potassium permanganate as a function of absorbance.
 
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{Figures/Calibration_Curve.png}
+    \caption{Average values of measured absorbance plotted against potassium permanganate concentration. A calibration curve is fit to the data using linear regression.}
+    \label{fig_kmno4_absorbance_calibration}
+\end{figure}
 
-% \printbibliography
+By inserting the resulting linear equation into the Beer-Lambert law and rearranging, an equation for the molar attenuation coefficient \(\varepsilon\) can be formed:
+
+\begin{equation}
+  A = \varepsilon \cdot c \cdot d = 2.4919 \cdot c
+\end{equation}
+\begin{conditions}
+    A & Absorbance \\
+    \varepsilon & Molar attenuation coefficient \\
+    c & Concentration of sample [mol/L] \\
+    d & Path length through sample
+\end{conditions}
 
 \end{document}
