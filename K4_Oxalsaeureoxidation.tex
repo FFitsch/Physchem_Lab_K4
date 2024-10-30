@@ -81,7 +81,7 @@ By diulting 7.5~mL of 2~mol/L sodium hydroxide with deionized water in a 50~mL v
 
 By diluting the former with the latter solution, small amounts of solutions with sodium hydroxide concentrations of 0.2, 0.1 and 0.05~mol/L, were prepared.
 
-2~mL of each of the four solutions were then transferred into a cuvette, and a drop of phenolphthalein was added. The cuvettes were inserted into the photometer, which was set at 532~nm\footnote{Due to an error, the desired wavelength of 550~nm was not set before starting the experiment}, and, after dropping to an absorbance value of 0.8, further measurements were taken every 30 seconds over a span of six minutes.
+2~mL of each of the four solutions were then transferred into a cuvette, and a drop of phenolphthalein was added. The cuvettes were inserted into the photometer, which was set at 532~nm\footnote{Due to an error, the desired wavelength of 550~nm was not set before starting the experiment}, and, after dropping to an absorbance value of 0.8, further measurements were taken every 30 seconds over a span of six minutes. Since the time available for the experiment ran out, only one sample of each concentration was measured. The final sample (0.05~mol/L) did not reach the starting absorbance of 0.8 in time, and as such, higher absorbance values were recorded and used for the evaluation of this sample.
 
 \newpage
 \section{Results and Discussion}
@@ -90,30 +90,40 @@ The recorded absorbances of potassium permanganate are plotted as an absorbance 
 %
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.7\textwidth]{Figures/Absorption\_Maximum.png}
+    \includegraphics[width=0.68\textwidth]{Figures/Absorption\_Maximum.png}
     \caption{Absorbance spectrum of KMnO\textsuperscript{4} at wavelengths between 450 and 600~nm. The blue dots show the measurements of the first scan, which was taken in 10~nm increments, while the orange dots mark the measurements of the second scan (2~nm increments). The absorbance maximum at 532~nm is shown in green.}
     \label{fig_kmno4_absorbance_spectrum}
 \end{figure}
 %
-\noindent Figure \ref{fig_kmno4_absorbance_calibration} shows the calibration curve (created through linear regression) for the concentration of potassium permanganate as a function of absorbance.
+\noindent Figure \ref{fig_kmno4_absorbance_calibration} shows the calibration curve (created through linear regression) for the concentration of potassium permanganate as a function of absorbance. As can be seen, linearity, and thus the validity of the Lambert-Beer law is given for the entire tested concentration range.
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.7\textwidth]{Figures/Calibration_Curve.png}
+    \includegraphics[width=0.68\textwidth]{Figures/Calibration_Curve.png}
     \caption{Average values of measured absorbance plotted against potassium permanganate concentration. A calibration curve is fit to the data using linear regression.}
     \label{fig_kmno4_absorbance_calibration}
 \end{figure}
-
-By inserting the resulting linear equation into the Beer-Lambert law and rearranging, an equation for the molar attenuation coefficient \(\varepsilon\) can be formed:
-
-\begin{equation}
-  A = \varepsilon \cdot c \cdot d = 2.4919 \cdot c
+%
+\noindent By inserting the resulting linear equation \(A = 2491.9 \cdot c\) into the Beer-Lambert law (Equation \ref{eq_beer_lambert}), rearranging and inserting the known cuvette length of 1~cm, the molar attenuation coefficient \(\varepsilon\) can be calculated:
+%
+\begin{equation} \label{eq_beer_lambert}
+  A = \varepsilon \cdot c \cdot d = 2491.9 \cdot c
+\end{equation}
+\begin{equation} \label{eq_attenuation_coefficient}
+  \varepsilon = \frac{2491.9}{d} = 2491.9
 \end{equation}
 \begin{conditions}
     A & Absorbance \\
-    \varepsilon & Molar attenuation coefficient \\
+    \varepsilon & Molar attenuation coefficient [L mol\textsuperscript{-1} cm\textsuperscript{-1}] \\
     c & Concentration of sample [mol/L] \\
-    d & Path length through sample
+    d & Path length through sample (cuvette length) [cm]
 \end{conditions}
+
+\subsection{Reaction order of Autocatalyzed Redox Reaction of KMnO\texorpdfstring{\textsubscript{4}}{4} and Oxalic Acid}
+By rearranging the Lambert-Beer law (Equation \ref{eq_beer_lambert}), the concentration of a sample can be determined from a given absorption value.
+%
+\begin{equation} \label{eq_concentration_from_attenuation}
+    c = \frac{A}{\varepsilon \cdot d} = \frac{A}{2491.9}
+\end{equation}
 
 \end{document}
