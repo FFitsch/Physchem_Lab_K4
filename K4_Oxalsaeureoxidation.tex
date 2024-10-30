@@ -7,13 +7,14 @@
 \usepackage{csquotes}
 
 \usepackage[backend=biber,style=verbose-ibid,sorting=ynt]{biblatex}
-\addbibresource{W2.bib}
+\addbibresource{K4.bib}
 
 \usepackage[breaklinks]{hyperref}
 
 \usepackage{graphicx}
 \usepackage{float}
 \usepackage[tableposition=top, justification=centering]{caption}
+\renewcommand{\arraystretch}{2}
 
 \usepackage{derivative}
 
@@ -33,7 +34,7 @@
 \pagestyle{fancy}
 \fancyhf{}
 \fancyhead[R]{\thepage}
-\fancyfoot[L]{K4 Oxalic Acid Oxidation}
+\fancyfoot[L]{K4: Oxalic Acid Oxidation}
 \fancyfoot[C]{Group F}
 \fancyfoot[R]{Adamer, Fitsch, Ritt}
 
@@ -46,8 +47,9 @@
 % TABLE OF CONTENTS
 \newpage
 \tableofcontents
-\thispagestyle{fancy}
+\thispagestyle{empty}
 
+\addtocounter{page}{-1}
 
 \newpage
 \section{Objective}
@@ -119,11 +121,32 @@ The recorded absorbances of potassium permanganate are plotted as an absorbance 
     d & Path length through sample (cuvette length) [cm]
 \end{conditions}
 
-\subsection{Reaction order of Autocatalyzed Redox Reaction of KMnO\texorpdfstring{\textsubscript{4}}{4} and Oxalic Acid}
+\subsection{Determination of Reaction Orders}
 By rearranging the Lambert-Beer law (Equation \ref{eq_beer_lambert}), the concentration of a sample can be determined from a given absorption value.
 %
 \begin{equation} \label{eq_concentration_from_attenuation}
     c = \frac{A}{\varepsilon \cdot d} = \frac{A}{2491.9}
 \end{equation}
-
+%
+The resulting concentrations can then be plotted according to the rate laws of zeroth, first and second order, which are shown in Table \ref{tb_rate_laws}.
+%
+\begin{table}[H]
+    \centering
+    \caption{Rate equations and their integrated forms for reactions of zeroth, first and second order.}
+    \label{tb_rate_laws}
+    \begin{tabular}{|c|c|c|}
+        \hline
+        \textbf{0th Order} & \textbf{1st Order} & \textbf{2nd Order}
+        \\
+        \hline
+        \(\displaystyle -\odv{c}{t} = k\) & \(\displaystyle -\odv{c}{t} = k \cdot c\) & \(\displaystyle -\odv{c}{t} = k \cdot c^2\)
+        \\
+        \hline
+        \(\displaystyle c = c_0 - k \cdot t\) & \(\displaystyle \ln{c} = ln{c_0} - k \cdot t\) & \(\displaystyle \frac{1}{c} = \frac{1}{c_0} + k \cdot t\)
+        \\
+        \hline
+    \end{tabular}
+\end{table}
+%
+\noindent The following Figures \ref{fig_kmno_autocatalyzed_rates}, \ref{fig_kmno_mn_catalyzed_rates} and \ref{fig_h2p_rates} show the respective concentrations (or - in the case of the phenolphthalein reaction - the absorbance, which is directly proportional to the concentration) plotted against time accordingly to the integrated rate equations shown above.
 \end{document}
