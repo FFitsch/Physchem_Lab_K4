@@ -1,6 +1,7 @@
 \documentclass[titlepage]{article}
 \usepackage{fancyhdr}
 \usepackage[margin=1.2in]{geometry}
+\usepackage{appendix}
 
 \usepackage[utf8]{inputenc}
 \usepackage[english]{babel}
@@ -27,7 +28,7 @@
 
 
 % Title Page -----------------------------------------------------------
-\title{Protocol \\ K4 - Oxalic Acid Oxidation}
+\title{Protocol \\ Physikal.-chem. Praktikum 165.008 \\ K4 - Oxalic Acid Oxidation}
 \author{Group F\\Jonas Adamer (12225913)\\Florian Fitsch (12218283)\\Leonhard Ritt (12208881)}
 \date{Date of experiment: 2024/10/21\\Date of submission:}
 
@@ -79,7 +80,7 @@ By dissolving 0.340~g manganese sulfate in deionized water in a 50~mL volumetric
 Three reactions were measured as described in Section \ref{ssec_experiment_reaction_autocatalyzed}, with the addition of adding 0.2~mL of the prepared manganese sulfate soltion to the reaction mixture before measuring it.
 
 \subsection{Measurement of the Deprotonation of Phenolphthalein by Sodium Hydroxide}
-By diulting 7.5~mL of 2~mol/L sodium hydroxide with deionized water in a 50~mL volumetric flask, 50~mL of a 0.3~mol/L solution was prepared. Additionally, by dissolving 877~g of sodium chloride in deionized water and diluting to 50~mL, a 0.3~mol/L solution was prepared.
+By diulting 7.5~mL of 2~mol/L sodium hydroxide with deionized water in a 50~mL volumetric flask, 50~mL of a 0.3~mol/L solution was prepared. Additionally, by dissolving 877~mg of sodium chloride in deionized water and diluting to 50~mL, a 0.3~mol/L solution was prepared.
 
 By diluting the former with the latter solution, small amounts of solutions with sodium hydroxide concentrations of 0.2, 0.1 and 0.05~mol/L, were prepared.
 
@@ -88,20 +89,21 @@ By diluting the former with the latter solution, small amounts of solutions with
 \newpage
 \section{Results and Discussion}
 \subsection{Absorbance Maximum and Calibration Curve of KMnO\texorpdfstring{\textsubscript{4}}{4}}
-The recorded absorbances of potassium permanganate are plotted as an absorbance spectrum in Figure \ref{fig_kmno4_absorbance_spectrum}. The determined absorbance maximum is at 532~nm.
+The recorded absorbances of potassium permanganate are plotted as an absorbance spectrum in Figure \ref{fig_kmno4_absorbance_spectrum}. The determined absorbance maximum is at 532~nm. While literature records a maximum at 526~nm\footcite{KMnO4_Maximum}, the discrepancy to the found value may be due to a number of factors such as imprecise photometer calibration or differences in cuvette materials and/or cleanliness.
 %
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.68\textwidth]{Figures/Absorption\_Maximum.png}
+    \includegraphics[width=0.8\textwidth]{Figures/Absorption\_Maximum.png}
     \caption{Absorbance spectrum of KMnO\textsubscript{4} at wavelengths between 450 and 600~nm. The blue dots show the measurements of the first scan, which was taken in 10~nm increments, while the orange dots mark the measurements of the second scan (2~nm increments). The absorbance maximum at 532~nm is shown in green.}
     \label{fig_kmno4_absorbance_spectrum}
 \end{figure}
 %
-\noindent Figure \ref{fig_kmno4_absorbance_calibration} shows the calibration curve (created through linear regression) for the concentration of potassium permanganate as a function of absorbance. As can be seen, linearity, and thus the validity of the Lambert-Beer law is given for the entire tested concentration range.
+\newpage
+\noindent Figure \ref{fig_kmno4_absorbance_calibration} shows the calibration curve (created through linear regression) for the concentration of potassium permanganate as a function of absorbance. In order to ensure higher accuracy at very low concentrations, the curve was constrained to show an absorbance of zero at a concentration of 0~mol/L. As can be seen, linearity, and thus the validity of the Lambert-Beer law is given for the entire tested concentration range.
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.68\textwidth]{Figures/Calibration_Curve.png}
+    \includegraphics[width=0.8\textwidth]{Figures/Calibration_Curve.png}
     \caption{Average values of measured absorbance plotted against potassium permanganate concentration. A calibration curve is fit to the data using linear regression.}
     \label{fig_kmno4_absorbance_calibration}
 \end{figure}
@@ -121,6 +123,7 @@ The recorded absorbances of potassium permanganate are plotted as an absorbance 
     d & Path length through sample (cuvette length) [cm]
 \end{conditions}
 
+\newpage
 \subsection{Determination of Reaction Order of Redox Reaction}
 By rearranging the Lambert-Beer law (Equation \ref{eq_beer_lambert}), the concentration of a sample can be determined from a given absorption value.
 %
@@ -148,7 +151,7 @@ The resulting concentrations can then be plotted according to the rate laws of z
     \end{tabular}
 \end{table}
 %
-\noindent The following Figures \ref{fig_kmno_autocatalyzed_rates} and \ref{fig_kmno_mn_catalyzed_rates} show the respective concentrations during the autocatalyzed and Mn\textsuperscript{2+}-catalyzed redox reactions of oxalic acid with potassium permanganate plotted against time according to the integrated rate equations shown above.
+\noindent The following Figures \ref{fig_kmno_autocatalyzed_rates} and \ref{fig_kmno_mn_catalyzed_rates} show the respective concentrations during the autocatalyzed and Mn\textsuperscript{2+}-catalyzed redox reactions of oxalic acid with potassium permanganate plotted against time according to the integrated rate equations shown above. For each plot, a curve has been fit using linear regression, with the coefficient of determination R\textsuperscript{2} calculated as a means to assess linearity.
 %
 \begin{figure}[H]
     \centering
@@ -161,9 +164,11 @@ The resulting concentrations can then be plotted according to the rate laws of z
     \begin{minipage}[c]{0.32\textwidth}
         \includegraphics[width=\textwidth]{Figures/autocatalyzed_2nd_order.png}
     \end{minipage}
-    \caption{Measured concentrations during the first of three autocatalyzed redox reactions plotted against time according to the integrated rate equations of zeroth order (left), first order (center) and second order (right).}
+    \caption{Measured concentrations during the first of three autocatalyzed redox reactions plotted against time according to the integrated rate equations of zeroth order (left), first order (center) and second order (right). Lines are fit to each plot using linear regression and the corresponding R\textsuperscript{2}-values shown.}
     \label{fig_kmno_autocatalyzed_rates}
 \end{figure}
+%
+\noindent As can be seen from the displayed coefficients of determination of the autocatalyzed reaction, the highest linearity is observed at zeroth order. If one considers however, that a system undergoing autocatalysis will have a reduced reaction speed at the start, it follows that systems in which a reaction usually proceeds quickly at first before slowing down over time as reactand concentration sinks (as is the case in first and second order reactions), may have a worse fit. As such, it is uncertain from this data, whether the indication of a zeroth order reaction by the displayed linearity values is true to reality.
 %
 \begin{figure}[H]
     \centering
@@ -176,16 +181,19 @@ The resulting concentrations can then be plotted according to the rate laws of z
     \begin{minipage}[c]{0.32\textwidth}
         \includegraphics[width=\textwidth]{Figures/mn_catalyzed_2nd_order.png}
     \end{minipage}
-    \caption{Measured concentrations during the first of three Mn\textsuperscript{2+}-catalyzed redox reactions plotted against time according to the integrated rate equations of zeroth order (left), first order (center) and second order (right).}
+    \caption{Measured concentrations during the first of three Mn\textsuperscript{2+}-catalyzed redox reactions plotted against time according to the integrated rate equations of zeroth order (left), first order (center) and second order (right). Lines are fit to each plot using linear regression and the corresponding R\textsuperscript{2}-values shown.}
     \label{fig_kmno_mn_catalyzed_rates}
 \end{figure}
 %
-\noindent Comparing the two figures above - in particular the graphs of zeroth order - the differences between the studied types of catalysis become apparent: while the autocatalyzed reaction proceeds very slowly at first before speeding up as time proceeds and slowing down as the permanganate concentration approaches zero, the Mn\textsuperscript{2+}-catalyzed reaction shows a rather steady reaction speed, plummeting towards the end.
+\noindent Looking at the coefficients of determination of the Mn\textsuperscript{2+}-catalyzed reaction, the highest linearity is found for the first order rate equation. However, a high linearity is also observed for a zeroth order reaction, while the first order reaction visibly deviates from the regression line at the start of the experiment. This hump in the first order plot, as well as the lack of apparent concavity in part of the zeroth order plot (which would be expected if the system was of first order), might be explained by the production of additional Mn\textsuperscript{2+}-ions during the reaction, further catalyzing and thus speeding it up after an initial delay.
 
-While such a steady decline in the zeroth-order-graph may be considered as an indicator of a zeroth-order reaction, the sudden drop in reaction speed of this line, contrasted with the rather steady rate shown in the first-order graph, might indicate a first-order reaction. Additionally, the fact that formation of Mn\textsuperscript{2+}-ions and thus autocatalysis of the reaction still takes place, might explain the lack of concavity of the zeroth-order-graph and the visible hump in the first-order-graph.
+Comparing the two figures above - in particular the graphs of zeroth order - the differences between the studied types of catalysis become apparent: while the autocatalyzed reaction proceeds very slowly at first before speeding up as time proceeds and slowing down as the permanganate concentration approaches zero, the Mn\textsuperscript{2+}-catalyzed reaction shows a rather steady reaction speed, plummeting towards the end.
 
-Additionally, from a chemical perspective, a second-order reaction might be expected due to the fact that two separate reactants are involved - however due to the high excess of oxalic acid (10 times the stoichiometric amount), the system might more accurately follow first-order-kinetics, resulting in a pseudo first-order reaction.
+Thus, while the coefficients of determination gathered from the autocatalyzed reaction indicate a reaction of zeroth order, it is assumed - for reasons stated in the above paragraphs - that the first order reaction shown by studying the linearities of the plots of the Mn\textsuperscript{2+}-catalyzed reaction is more accurate to reality.
 
+Additionally, this assumption more closely matches expectations from looking at the reaction from a chemical standpoint: a second-order reaction might be expected due to the fact that two separate reactants are involved; however, due to the high excess of oxalic acid (10 times the stoichiometric amount), the system might more accurately follow first order kinetics, resulting in a pseudo first order reaction.
+
+\newpage
 \subsection{Determination of Reaction Order of Acid-Base Reaction}
 In order to determine the reaction order, the measured absorbance (which is proportional to the concentration of phenolphthalein) was plotted against time accoring to the integrated rate equations shown in Table \ref{tb_rate_laws}.
 
@@ -200,10 +208,76 @@ In order to determine the reaction order, the measured absorbance (which is prop
     \begin{minipage}[c]{0.32\textwidth}
         \includegraphics[width=\textwidth]{Figures/h2p_2nd_order.png}
     \end{minipage}
-    \caption{Measured absorbance values during the reactions of phenolphthalein with different concentrations of sodium hydroxide plotted against time according to the integrated rate equations of zeroth order (left), first order (center) and second order (right).}
+    \caption{Measured absorbance values during the reactions of phenolphthalein with different concentrations of sodium hydroxide plotted against time according to the integrated rate equations of zeroth order (left), first order (center) and second order (right). Lines are fit to each plot using linear regression and the corresponding R\textsuperscript{2}-values shown.}
     \label{fig_h2p_rates}
 \end{figure}
 %
-\noindent From the above figure one can see quite clearly that the first-order rate equation shows the most linear trend and, as such, the reaction is presumed to be a first-order reaction. This is due to the fact that the concentration of sodium hydroxide is several orders of magnitude greater than that of phenolphthalein and can thus be considered static over the course of the experiment. As such, the reaction is of pseudo-first-order. Nonetheless, it is apparent that, with higher sodium hydroxide-concentrations, the reaction proceeds at a higher rate, which further confirms that the reaction is not strictly first-order.
+\noindent The linear regression curves shown in the figure above and their coefficients of determination show that, for every concentration other than 0.05~mol/L, a reaction of first order most closely fits the recorded data. This matches the chemical expectation of a pseudo first order reaction, since the concentration of sodium hydroxide is several orders of magnitude greater than that of phenolphthalein and can thus be considered static over the course of the experiment. Nonetheless, it is apparent that, with higher sodium hydroxide-concentrations, the reaction proceeds at a higher rate, which further suggests that the reaction is not strictly first-order.
 
+\section{Conclusion}
+Through in-situ absorption measurements, the kinetics of an autocatalyzed as well as a regularly catalyzed redox-reaction, as well as an acid-base reaction were studied.
+
+While the data recorded from the autocatalyzed redox reaction of potassium permanganate and oxalic acid indicated a zeroth order reaction, the data from the catalyzed reaction pointed towards first order kinetics. Ultimately, a first order reaction was deemed the more accurate model of reality, both from a kinetic and a chemical point of view.
+
+The acid-base reaction of phenolphthalein and sodium hydroxide too, was determined to most closely follow the kinetics of a first order reaction, although a dependency of the reaction speed to the concentration of sodium hydroxide was observed, indicating a second order (pseudo first order) reaction instead.
+
+\appendix
+\appendixpage
+\section{Plots of Further Oxalic Acid Oxidation Experiments}
+\begin{figure}[H]
+    \centering
+    \begin{minipage}[c]{0.32\textwidth}
+        \includegraphics[width=\textwidth]{Figures/autocatalyzed_0th_order_exp2.png}
+    \end{minipage}
+    \begin{minipage}[c]{0.32\textwidth}
+        \includegraphics[width=\textwidth]{Figures/autocatalyzed_1st_order_exp2.png}
+    \end{minipage}
+    \begin{minipage}[c]{0.32\textwidth}
+        \includegraphics[width=\textwidth]{Figures/autocatalyzed_2nd_order_exp2.png}
+    \end{minipage}
+    \caption{Measured concentrations during the second of three autocatalyzed redox reactions plotted against time according to the integrated rate equations of zeroth order (left), first order (center) and second order (right). Lines are fit to each plot using linear regression and the corresponding R\textsuperscript{2}-values shown.}
+    \label{fig_kmno_autocatalyzed_rates_exp2}
+\end{figure}
+\begin{figure}[H]
+    \centering
+    \begin{minipage}[c]{0.32\textwidth}
+        \includegraphics[width=\textwidth]{Figures/autocatalyzed_0th_order_exp3.png}
+    \end{minipage}
+    \begin{minipage}[c]{0.32\textwidth}
+        \includegraphics[width=\textwidth]{Figures/autocatalyzed_1st_order_exp3.png}
+    \end{minipage}
+    \begin{minipage}[c]{0.32\textwidth}
+        \includegraphics[width=\textwidth]{Figures/autocatalyzed_2nd_order_exp3.png}
+    \end{minipage}
+    \caption{Measured concentrations during the third of three autocatalyzed redox reactions plotted against time according to the integrated rate equations of zeroth order (left), first order (center) and second order (right). Lines are fit to each plot using linear regression and the corresponding R\textsuperscript{2}-values shown.}
+    \label{fig_kmno_autocatalyzed_rates_exp3}
+\end{figure}
+\begin{figure}[H]
+    \centering
+    \begin{minipage}[c]{0.32\textwidth}
+        \includegraphics[width=\textwidth]{Figures/mn_catalyzed_0th_order_exp2.png}
+    \end{minipage}
+    \begin{minipage}[c]{0.32\textwidth}
+        \includegraphics[width=\textwidth]{Figures/mn_catalyzed_1st_order_exp2.png}
+    \end{minipage}
+    \begin{minipage}[c]{0.32\textwidth}
+        \includegraphics[width=\textwidth]{Figures/mn_catalyzed_2nd_order_exp2.png}
+    \end{minipage}
+    \caption{Measured concentrations during the second of three Mn\textsuperscript{2+}-catalyzed redox reactions plotted against time according to the integrated rate equations of zeroth order (left), first order (center) and second order (right). Lines are fit to each plot using linear regression and the corresponding R\textsuperscript{2}-values shown.}
+    \label{fig_kmno_mn_catalyzed_rates_exp2}
+\end{figure}
+\begin{figure}[H]
+    \centering
+    \begin{minipage}[c]{0.32\textwidth}
+        \includegraphics[width=\textwidth]{Figures/mn_catalyzed_0th_order_exp3.png}
+    \end{minipage}
+    \begin{minipage}[c]{0.32\textwidth}
+        \includegraphics[width=\textwidth]{Figures/mn_catalyzed_1st_order_exp3.png}
+    \end{minipage}
+    \begin{minipage}[c]{0.32\textwidth}
+        \includegraphics[width=\textwidth]{Figures/mn_catalyzed_2nd_order_exp3.png}
+    \end{minipage}
+    \caption{Measured concentrations during the third of three Mn\textsuperscript{2+}-catalyzed redox reactions plotted against time according to the integrated rate equations of zeroth order (left), first order (center) and second order (right). Lines are fit to each plot using linear regression and the corresponding R\textsuperscript{2}-values shown.}
+    \label{fig_kmno_mn_catalyzed_rates_exp3}
+\end{figure}
 \end{document}
